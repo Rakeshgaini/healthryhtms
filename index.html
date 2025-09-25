@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Rhythms</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('https://uc.uxpin.com/files/450799/452430/AdobeStock_693174577_Preview-e708989ad0262cf6665b3fd353e49f23-2d3c02.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background-color: #FF5B54;
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        }
+
+        /* Styling for the second page */
+        .second-page {
+            display: flex;
+            flex-direction: row; /* Flexbox to split into two halves */
+            padding: 40px 0;
+        }
+
+        /* Left content (Text section) */
+        .left-content {
+            width: 50%;
+            padding: 40px;
+        }
+
+        /* Right image section */
+        .right-image {
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Background image style */
+        .background-image {
+            position: absolute;
+            width: 1197px;
+            height: 1246px;
+            opacity: 0.1;
+            fill: #FF5B54;
+            transform: scaleX(-1) scaleY(-1) rotate(30deg);
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            z-index: -1; /* Ensure the background is behind the image */
+        }
+
+        /* Image in the right half */
+        .image {
+            width: 60%; /* Adjust the image size */
+            max-width: 300px; /* Limit max width */
+            object-fit: contain; /* Ensure the image maintains aspect ratio */
+        }
+
+        /* Third Page Styles */
+        .third-page {
+            position: relative;
+            padding: 60px 0;
+            background-color: #f7f7f7;
+        }
+
+        .bg-left {
+            width: 1156px;
+            height: 1203px;
+            opacity: 0.1;
+            background-color: #ff5b54;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: rotate(-4deg);
+        }
+
+        .bg-right {
+            width: 1440px;
+            height: 600px;
+            background-color: #3d0200;
+            position: relative;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            margin-left: 4rem; /* Ensure content stays within the viewport */
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content ul {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .content a {
+            background-color: #ff5b54;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .page {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .page h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .faq-box {
+            width: 1000px;
+            height: 80px;
+            opacity: 0.9;
+            border-radius: 10px;
+            background-color: #f3f4f6; /* Grey background */
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        .faq-title {
+            width: 475px;
+            height: 44px;
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            color: #3d0200;
+            text-decoration: none solid rgb(61, 2, 0);
+            text-align: center;
+        }
+
+        /* Fourth Page FAQ section */
+        .faq-container {
+            margin-top: 20px;
+        }
+
+        .faq-box span {
+            font-size: 16px;
+            color: black; /* Black text */
+            flex: 1;
+        }
+
+        .faq-box button {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            color: #ff5b54; /* Red button color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Container for smooth scrolling -->
+    <div class="page-container">
+
+        <!-- First Page Content (Hero Section) -->
+        <header class="hero-section relative">
+            <!-- Red Polygon Shape Overlay -->
+            <div class="overlay-shape"></div>
+
+            <!-- Logo Positioned in the Top-Left Corner -->
+            <img src="https://uc.uxpin.com/files/450799/452430/logo_1-b7efae81b54709e2d7d15351fed0dbc4.png"
+                 class="absolute top-5 left-5 h-24 w-48 m-10">
+
+            <!-- Main Content -->
+            <div class="absolute left-0 -translate-y-1/2 p-8 max-w-2xl text-black z-10">
+                <div class="text-6xl font-bold mb-4">
+                    <p class="mb-2">A new avenue</p>
+                    <p class="mb-2">of mental health</p>
+                    <p class="mb-2">monitoring</p>
+                </div>
+                <p class="mb-6 text-3xl font-500 mb-2">Join the Health Rhythms Study</p>
+                <a href="#fifth-page" class="w-48 h-12 text-white font-[Inter] text-[16px] uppercase text-center flex items-center justify-center rounded-full no-underline"
+             style="background-color: #3d0200;">
+              JOIN NOW
+          </a>
+            </div>
+        </header>
+
+        <!-- Second Page Content (Scrollable) -->
+        <div class="second-page">
+            <!-- Left content (Text section) -->
+            <div class="left-content">
+                <div class="max-w-4xl mx-auto p-8">
+                    <div class="flex items-center mb-8">
+                        <div>
+                          <img src="https://uc.uxpin.com/files/450799/452430/logo_1-b7efae81b54709e2d7d15351fed0dbc4.png"
+                 class="absolute top-5 left-5 h-24 w-48 m-10">
+                        </div>
+                        <h1 class="text-4xl font-bold">What’s the Health Rhythms study?</h1>
+                    </div>
+                    <p class="mb-6 text-lg text-gray-700">
+                        The Health Rhythms study is designed to monitor participants and establish a baseline for 
+                        mental health. Therapy is not a complete answer, and its monitoring can be sporadic. 
+                        Health Rhythms is a way to keep track of factors that impact mental health, and to create 
+                        a new way to diagnose and aid people with depression, and other ailments.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold mb-6" style="color: #FF5B54;">The Benefits of Participating</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">⏰</span>
+                            </div>
+                            <p class="text-center">Round-the-clock monitoring</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">📱</span>
+                            </div>
+                            <p class="text-center">Regular check-ins via the app</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">🗓️</span>
+                            </div>
+                            <p class="text-center">Weekly surveys and checks</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">📲</span>
+                            </div>
+                            <p class="text-center">Available on all mobile platforms</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                            <p class="text-center">Medical-grade encryption</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-gray-200 p-6 rounded-full mb-2">
+                                <span class="text-2xl">📊</span>
+                            </div>
+                            <p class="text-center">Personalized results</p>
+                        </div>
+                    </div>
+
+                    <a href="#fifth-page" class="bg-red-500 text-white py-3 px-6 rounded-full hover:bg-red-600 transition duration-300">
+                        JOIN THE STUDY TODAY
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Section -->
+            <div class="right-image">
+                <!-- Background Image with specified styles -->
+                <div class="background-image"></div>
+                
+                <!-- Actual Image from URL -->
+                <img src="https://uc.uxpin.com/files/450799/452430/image-ba17e0bbe49284d87ba6e7173c56e7ba-0772b5.png" alt="Study Image" class="image">
+            </div>
+        </div>
+
+        <!-- Third Page Content -->
+        <div class="third-page" style="padding-left: 40px;">
+            <div class="bg-right flex justify-center items-center relative overflow-hidden">
+                <div class="bg-left"></div>
+                <img src="https://uc.uxpin.com/files/450799/452430/planner_list_agendar_note_graphic_1-8eb1aa4c768a45ffeaefd3524ee08817-624e2d.jpg"
+                    alt="Check list image" class="w-1/2 h-auto rounded-l-lg">
+                <div class="content p-8 rounded-lg shadow-lg ml-4">
+                    <h2 class="text-xl font-bold text-gray-800" style="color: #FF5B54; font-family: Inter; font-size: 36px; text-decoration: none solid rgb(255, 91, 84);">Eligibility criteria</h2>
+                    <ul class="pl-5 text-white mt-4">
+                      <li class="text-white">
+                          <span style = "color: #ff5b54;font-size: 20px;">•</span> Participants are 18 years or older
+                      </li>
+                      <li class="text-white">
+                          <span style = "color: #ff5b54;font-size: 20px;">•</span> Are current residents of the United States
+                      </li>
+                      <li class="text-white">
+                          <span style = "color: #ff5b54;font-size: 20px;">•</span> Must speak English
+                      </li>
+                      <li class="text-white">
+                          <span style = "color: #ff5b54;font-size: 20px;">•</span> Self-diagnosed for depression
+                      </li>
+                      <li class="text-white">
+                          <span style = "color: #ff5b54; font-size: 20px;">•</span> Own a smartphone (iOS 15/Android 11 or higher)
+                      </li>
+                  </ul>
+                  
+                    <a href="#fifth-page" class="mt-6 inline-block bg-orange-500 text-black font-semibold py-2 px-4 rounded hover:bg-orange-400" style="border-radius: 300px;">
+                        JOIN THE STUDY TODAY
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fourth Page FAQ Section -->
+    <div class="faq-container">
+      <h1 class="faq-title" style="font-weight: bold; text-align: center; justify-self: center;">FAQs</h1>
+
+      <div class="flex flex-col items-center space-y-4 mt-8">
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>What is the duration of the HealthRhythms study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>What can I expect from the study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>Why should I participate?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>What do I need to participate in the study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>What can I expect when I participate?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>Are there risks involved in participating in this study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>When will I see the results of my participation?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>How secure is my data while participating in this study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>Is there any compensation for participating in the study?</span>
+              <button class="text-red-600">+</button>
+          </div>
+          <div class="faq-box flex items-center justify-between px-4">
+              <span>What information will be tracked by the app?</span>
+              <button class="text-red-600">+</button>
+          </div>
+      </div>
+  </div>
+  <div id="fifth-page" style="padding-top: -40px;">
+    <div class="container mx-auto max-w-3xl bg-red-50 py-16 px-8 mt-40 shadow-lg rounded-lg">
+        <h1 class="text-center text-3xl font-bold mb-6 text-brown-700" style="color: #3d0200;" >Join the Health Rhythms study today</h1>
+        <div class="flex justify-center mb-6">
+
+            <span id="step1Indicator" class="px-6 py-2 rounded-full bg-red-600 text-white cursor-pointer text-xl" style="color: white;background-color: #3d0200;">1</span>
+            <span class="flex-1 h-2 bg-gray-400 mx-2"></span>
+            <span id="step2Indicator" class="px-6 py-2 rounded-full bg-brown-300 cursor-pointer text-xl">2</span>
+        </div>
+
+        <!-- Step 1 -->
+        <div id="step1" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block font-medium text-brown-700">First Name*</label>
+                    <input type="text" class="border border-gray-300 p-2 w-full rounded" required>
+                </div>
+                <div>
+                    <label class="block font-medium text-brown-700">Last Name*</label>
+                    <input type="text" class="border border-gray-300 p-2 w-full rounded" required>
+                </div>
+                <div>
+                    <label class="block font-medium text-brown-700">Phone*</label>
+                    <input type="text" class="border border-gray-300 p-2 w-full rounded" required>
+                </div>
+                <div>
+                    <label class="block font-medium text-brown-700">Email Address*</label>
+                    <input type="email" class="border border-gray-300 p-2 w-full rounded" required>
+                </div>
+            </div>
+            <button id="nextButton" class="w-full bg-red-500 text-white p-2 rounded">NEXT</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="step2" class="space-y-4 hidden">
+            <div>
+                <label class="block font-medium text-brown-700">Age*</label>
+                <input type="number" class="border border-gray-300 p-2 w-full rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium text-brown-700">Gender*</label>
+                <select class="border border-gray-300 p-2 w-full rounded">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button id="submitButton" class="w-full bg-red-500 text-white p-2 rounded" >SUBMIT</button>
+        </div>        
+    </div>
+</div>
+
+<footer class="flex items-center justify-center mt-8" style="background-color: #3d0200; height: 40px; color: #f3f4f6;">
+    <p>Copyright © 2024 Health Rhythms. All Rights Reserved.</p>
+</footer>
+
+
+  <script>
+      document.getElementById("nextButton").addEventListener("click", function() {
+          document.getElementById("step1").classList.add("hidden");
+          document.getElementById("step2").classList.remove("hidden");
+          document.getElementById("step1Indicator").classList.remove("bg-red-600", "text-white");
+          document.getElementById("step1Indicator").classList.add("bg-gray-300");
+          document.getElementById("step2Indicator").classList.remove("bg-gray-300");
+          document.getElementById("step2Indicator").classList.add("bg-red-600", "text-white");
+      });
+
+      document.getElementById("step1Indicator").addEventListener("click", function() {
+          document.getElementById("step2").classList.add("hidden");
+          document.getElementById("step1").classList.remove("hidden");
+          document.getElementById("step2Indicator").classList.remove("bg-red-600", "text-white");
+          document.getElementById("step2Indicator").classList.add("bg-gray-300");
+          document.getElementById("step1Indicator").classList.remove("bg-gray-300");
+          document.getElementById("step1Indicator").classList.add("bg-red-600", "text-white");
+      });
+  </script>
+  </div>
+
+</body>
+
+</html>
